@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaDeCompras.Views.HomeView"             
+             BackgroundColor="#1895de"
+             NavigationPage.HasNavigationBar="False">
+   
+        <StackLayout Orientation="Vertical">
+
+        <Image x:Name="imagemHome"
+               Source="lista256.png" 
+               HeightRequest="130" 
+               WidthRequest="130" 
+               Margin="0,150,0,0"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"                
+               >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="lista_Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="Lista de Compras"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand" 
+               />
+        </StackLayout>
+    
+</ContentPage>

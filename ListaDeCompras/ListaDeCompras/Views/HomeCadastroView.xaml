@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaDeCompras.Views.HomeCadastroView"
+             Title="Lista de Compras">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="addProduto" IconImageSource="new128.png" Activated="addProduto_Activated"/>
+        <ToolbarItem x:Name="removeProduto" IconImageSource="remove128.png" Activated="removeProduto_Activated"/>
+    </ContentPage.ToolbarItems>
+    
+    
+        <StackLayout>
+
+        <SearchBar Placeholder="Pesquisar"
+                   TextChanged="SearchBar_TextChanged"
+                   />
+        <ListView x:Name="listaProdutos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nome}"
+                              Detail="{Binding Quantidade}"                              
+                              DetailColor="gray"
+                              TextColor="Black"                              
+                              >
+                        
+                        <TextCell.ContextActions>
+                            <MenuItem x:Name="menuItemEditar"
+                                      Text="Editar"
+                                      Clicked="menuItemEditar_Clicked"
+                                      CommandParameter="{Binding .}"
+                                      />
+                            <MenuItem x:Name="menuItemExcluir"
+                                      Text="Excluir"
+                                      Clicked="menuItemExcluir_Clicked"
+                                      IsDestructive="True"
+                                      CommandParameter="{Binding .}"
+                                      />
+                        </TextCell.ContextActions>
+                        
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+   
+</ContentPage>

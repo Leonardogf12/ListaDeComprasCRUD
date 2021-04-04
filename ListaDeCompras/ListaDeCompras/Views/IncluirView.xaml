@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaDeCompras.Views.IncluirView"
+             Title="Novo Produto"
+             >
+   
+        <StackLayout>
+        <TableView x:Name="tableProduto" Intent="Form">
+            <TableRoot Title="DataForm">
+
+                <TableSection Title="Informacões do Produto">
+                    <EntryCell x:Name="entryNome" 
+                               Label="Nome:" 
+                               LabelColor="DeepPink"
+                               Text="{Binding Nome}"                                                               
+                               Keyboard="Text" 
+                               />
+                    <EntryCell x:Name="entryQtd" 
+                               Label="Quantidade:" 
+                               LabelColor="DeepPink"
+                               Text="{Binding Quantidade}"                               
+                               Keyboard="Numeric" 
+                               />
+                </TableSection>
+
+            </TableRoot>
+        </TableView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Incluir"  Clicked="Salvar_Clicked"/>
+            <Button Text="Cancelar" Clicked="Cancelar_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
