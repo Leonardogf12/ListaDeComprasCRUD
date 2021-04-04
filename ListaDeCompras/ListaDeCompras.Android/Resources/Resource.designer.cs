@@ -11680,7 +11680,7 @@ namespace ListaDeCompras.Droid
 			public const int design_snackbar_background = 2131165291;
 			
 			// aapt resource value: 0x7F070070
-			public const int iconApp64 = 2131165296;
+			public const int icon = 2131165296;
 			
 			// aapt resource value: 0x7F07006C
 			public const int ic_mtrl_checked_circle = 2131165292;
